@@ -111,9 +111,13 @@ module.exports = {
           "**/tags",
           "**/taxonomies",
           "**/users",
+          "**/*/*/menus",
+          "**/*/*/portfolio",
+          "/*/*/logo",
+          "/*/*/favicon",
         ],
         // Blacklisted routes using glob patterns
-        excludedRoutes: ["**/posts/1456"],
+        excludedRoutes: [],
         // Set this to keep media sizes.
         // This option is particularly useful in case you need access to
         // URLs for thumbnails, or any other media detail.
@@ -121,7 +125,7 @@ module.exports = {
         keepMediaSizes: false,
         // use a custom normalizer which is applied after the built-in ones.
         normalizer: function({ entities }) {
-          return entities
+          return entities;
         },
         // The normalizers option allows you to manipulate the array of internal
         // normalizers that are applied to entities after they're fetched
@@ -138,7 +142,7 @@ module.exports = {
             name: "nameOfTheFunction",
             normalizer: function({ entities }) {
               // manipulate entities here
-              return entities
+              return entities;
             },
           },
         ],
@@ -148,4 +152,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
