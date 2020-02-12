@@ -12,6 +12,16 @@ const portfolio = ({ pageContext }) => {
   return (
     <Layout>
       <h1>{pageContext.title}</h1>
+      <strong>
+        website url:
+        <a
+          href={pageContext.acf.portfolio_url}
+          target="blank"
+          rel="noopener noreferrer"
+        >
+          see more
+        </a>
+      </strong>
       <FeaturedIage
         src={pageContext.featured_media.source_url}
         alt={pageContext.featured_media.alt_text}

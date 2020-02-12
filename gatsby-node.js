@@ -48,6 +48,9 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             excerpt
             content
+            acf {
+              portfolio_url
+            }
           }
         }
       }
